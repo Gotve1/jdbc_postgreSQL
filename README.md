@@ -1,0 +1,2 @@
+to build the project install build plugin [maven-assembly-plugin](https://maven.apache.org/plugins/maven-assembly-plugin/usage.html#execution-building-an-assembly)
+and then run `mvn clean package` to build the project.
