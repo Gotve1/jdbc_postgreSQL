@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        SQLconnect sqlData = new SQLconnect();
+        SQLConnect sqlData = new SQLConnect();
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("\nEnter a command\n");
@@ -32,7 +32,7 @@ public class Main {
         }
     }
 
-    public static void get(SQLconnect sqlData) {
+    public static void get(SQLConnect sqlData) {
         try (Connection connection = DriverManager.getConnection(
                 sqlData.getUrl(),
                 sqlData.getUser(),
@@ -53,7 +53,7 @@ public class Main {
         }
     }
 
-    public static void post(SQLconnect sqlData) {
+    public static void post(SQLConnect sqlData) {
         Scanner nextString = new Scanner(System.in);
         try (Connection connection = DriverManager.getConnection(
                 sqlData.getUrl(),
@@ -75,7 +75,7 @@ public class Main {
         }
     }
 
-    public static void update(SQLconnect sqlData) {
+    public static void update(SQLConnect sqlData) {
         Scanner nextString = new Scanner(System.in);
         try (Connection connection = DriverManager.getConnection(
                 sqlData.getUrl(),
@@ -93,7 +93,7 @@ public class Main {
         }
     }
 
-    public static void delete(SQLconnect sqlData) {
+    public static void delete(SQLConnect sqlData) {
         Scanner nextString = new Scanner(System.in);
         try (Connection connection = DriverManager.getConnection(
                 sqlData.getUrl(),

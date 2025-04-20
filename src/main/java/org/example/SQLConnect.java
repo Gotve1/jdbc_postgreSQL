@@ -1,6 +1,6 @@
 package org.example;
 
-public class SQLconnect {
+public class SQLConnect {
     private String url = "jdbc:postgresql://localhost:5432/testbase";
     private String user = "postgres";
     private String password = "root";
