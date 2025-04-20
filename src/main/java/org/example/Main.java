@@ -33,7 +33,8 @@ public class Main {
     }
 
     public static void get(SQLconnect sqlData) {
-        try (Connection connection = DriverManager.getConnection(sqlData.getUrl(),
+        try (Connection connection = DriverManager.getConnection(
+                sqlData.getUrl(),
                 sqlData.getUser(),
                 sqlData.getPassword())) {
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM users");
@@ -54,7 +55,8 @@ public class Main {
 
     public static void post(SQLconnect sqlData) {
         Scanner nextString = new Scanner(System.in);
-        try (Connection connection = DriverManager.getConnection(sqlData.getUrl(),
+        try (Connection connection = DriverManager.getConnection(
+                sqlData.getUrl(),
                 sqlData.getUser(),
                 sqlData.getPassword())) {
             PreparedStatement statement = connection.prepareStatement("INSERT INTO users (name) VALUES (?)");
@@ -75,7 +77,8 @@ public class Main {
 
     public static void update(SQLconnect sqlData) {
         Scanner nextString = new Scanner(System.in);
-        try (Connection connection = DriverManager.getConnection(sqlData.getUrl(),
+        try (Connection connection = DriverManager.getConnection(
+                sqlData.getUrl(),
                 sqlData.getUser(),
                 sqlData.getPassword())) {
             PreparedStatement statement = connection.prepareStatement("UPDATE users SET name = ? WHERE id = ?");
@@ -92,7 +95,8 @@ public class Main {
 
     public static void delete(SQLconnect sqlData) {
         Scanner nextString = new Scanner(System.in);
-        try (Connection connection = DriverManager.getConnection(sqlData.getUrl(),
+        try (Connection connection = DriverManager.getConnection(
+                sqlData.getUrl(),
                 sqlData.getUser(),
                 sqlData.getPassword())) {
             PreparedStatement statement = connection.prepareStatement("DELETE FROM users WHERE id = ?");
